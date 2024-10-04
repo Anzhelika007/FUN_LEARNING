@@ -170,6 +170,13 @@
     {
       "packageName": "english",
       "projectFolder": "apps/english",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "html-css-learn",
+      "projectFolder": "apps/html-css-learn",
+      "reviewCategory": "production"
+    
     //   // "subspaceName": "my-subspace",
     //   "reviewCategory": "production",
     //   "decoupledLocalDependencies": [
