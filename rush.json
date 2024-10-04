@@ -176,7 +176,16 @@
       "packageName": "html-css-learn",
       "projectFolder": "apps/html-css-learn",
       "reviewCategory": "production"
-    
+    },
+    {
+      "packageName": "js-learn",
+      "projectFolder": "apps/js-learn",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "react-learn",
+      "projectFolder": "apps/react-learn",
+      "reviewCategory": "production"
     //   // "subspaceName": "my-subspace",
     //   "reviewCategory": "production",
     //   "decoupledLocalDependencies": [
