@@ -1,9 +1,9 @@
 name: CI
 on:
   push:
-    branches: [ "main" ]
+    branches: ["develop", "production"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["develop"]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +14,8 @@ jobs:
       - name: Git config user
         uses: snow-actions/git-config-user@v1.0.0
         with:
-          name: # Service Account's Name
-          email: # Service Account's Email Address
+          name: Anzhalika Turlak
+          email: 293852647@mail.ru
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -24,4 +24,8 @@ jobs:
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
+        if: github.ref == 'refs/heads/develop'
+        run: node common/scripts/install-run-rush.js rebuild --verbose
+      - name: Rush rebuild for production
+        if: github.ref == 'refs/heads/main'
         run: node common/scripts/install-run-rush.js rebuild --verbose --production
