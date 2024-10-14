@@ -1,8 +1,8 @@
-#!/bin/sh
-. "$(dirname -- "$0")/_/husky.sh"
+!/bin/sh
+#. "$(dirname -- "$0")/_/husky.sh"
 
 message=$(cat $1)
-requirePattern="^\[[A-Z][a-zA-Z]+-[0-9]+\]\s+(docs|fix|feat|init|refactor):\s.*"
+requiredPattern="^\[[A-Z][a-zA-Z]+-[0-9]+\]\s+(docs|fix|feat|init|refactor):\s.*"
 
 
 if ! echo "$message" | grep -qE "$requiredPattern";
