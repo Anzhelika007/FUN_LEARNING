@@ -32,7 +32,7 @@ $ npm i your-awesome-plugin-name
 И добавьте в свой проект:
 
 ```typescript
-import { hi } from "your-awesome-plugin-name";
+import { hi } from 'your-awesome-plugin-name';
 
 hi();
 ```

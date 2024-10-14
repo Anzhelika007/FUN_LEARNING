@@ -74,44 +74,44 @@ Create a `tsconfig.json` file in the root of `apps/my-react-app`:
 Create a `webpack.config.js` file in the root of `apps/my-react-app`:
 
 ```javascript
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: "ts-loader",
+        use: 'ts-loader'
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: "babel-loader",
-      },
-    ],
+        use: 'babel-loader'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
+      template: './public/index.html'
+    })
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, 'dist')
     },
     compress: true,
-    port: 8000,
-  },
+    port: 8000
+  }
 };
 ```
 
@@ -127,7 +127,7 @@ touch src/index.tsx public/index.html
 Inside `public/index.html`, add the basic HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -145,12 +145,12 @@ Inside `public/index.html`, add the basic HTML:
 Inside `src/index.tsx`, add the following:
 
 ```tsx
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 const App: React.FC = () => <h1>Hello, React with TypeScript and Rush.js!</h1>;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ## 9. Add the Project to Rush
